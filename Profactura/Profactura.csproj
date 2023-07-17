@@ -11,7 +11,8 @@
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />  
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Cliente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GoogleMaps.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Inversionista.xaml">

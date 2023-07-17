@@ -46,5 +46,10 @@ namespace Profactura
             Navigation.PushAsync(new Login());
 
         }
+
+        private void btnGoogle_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GoogleMaps(usuario));
+        }
     }
 }

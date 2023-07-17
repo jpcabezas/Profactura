@@ -42,7 +42,8 @@
                     <Button x:Name="btnInserCliente" Text="Insertar Cliente" Clicked="btnInserCliente_Clicked"  Style="{StaticResource buttonStyle}" Grid.Row="12"/>
                     <Button x:Name="btnVerInver" Text="Ver Inversionista" Clicked="btnVerInver_Clicked"  Style="{StaticResource buttonStyle}" Grid.Row="13"/>
                     <Button x:Name="btnInserInver" Text="Insertar Inversionista" Clicked="btnInserInver_Clicked"  Style="{StaticResource buttonStyle}" Grid.Row="14"/>
-                    <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Style="{StaticResource buttonStyle}" Grid.Row="15"/>
+                    <Button x:Name="btnGoogle" Text="Google Maps" Clicked="btnGoogle_Clicked"  Style="{StaticResource buttonStyle}" Grid.Row="15"/>
+                    <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Style="{StaticResource buttonStyle}" Grid.Row="16"/>
                 </Grid>
             </StackLayout>
         </Grid>
