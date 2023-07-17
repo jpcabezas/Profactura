@@ -5,41 +5,61 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="blue"/>
-                <Setter Property="TextColor" Value="Black"/>
-                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="BackgroundColor" Value="#283593"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="120"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Label Text="Bienvenido a Profactura Móvil" FontSize="22" HorizontalTextAlignment="Center" Style="{StaticResource miEstilo}"/>
-            <Image Source="Logo.jpeg" HeightRequest="300"/>
-           
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+        <Grid>
+            <!-- Aquí colocamos la imagen de fondo de pantalla -->
+            <Image Source="fondopantallas.png" Aspect="AspectFill"/>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <!--Label Text="Profactura Móvil" FontSize="22" HorizontalOptions="Center" Style="{StaticResource miEstilo}"/-->
+                <!--Image Source="Logo.jpeg" HeightRequest="200"/-->
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                <Grid>
 
-                </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/> <!-- 0 -->
+                        <RowDefinition Height="Auto"/> <!-- 1 -->
+                        <RowDefinition Height="Auto"/> <!-- 2 -->
+                        <RowDefinition Height="Auto"/> <!-- 3 -->
+                        <RowDefinition Height="Auto"/> <!-- 4 -->
+                        <RowDefinition Height="Auto"/> <!-- 5 -->
+                        <RowDefinition Height="Auto"/> <!-- 6 -->
+                        <RowDefinition Height="Auto"/> <!-- 7 -->
+                        <RowDefinition Height="Auto"/> <!-- 8 -->
+                        <RowDefinition Height="Auto"/> <!-- 9 -->
+                        <RowDefinition Height="Auto"/> <!-- 10 -->
+                        <RowDefinition Height="Auto"/> <!-- 11 -->
+                    </Grid.RowDefinitions>
 
-                <Label Text="Usuario" FontSize="22" Grid.Row="0" Grid.Column="0" Style="{StaticResource miEstilo}"/>
-                <Label Text="Contraseña" FontSize="22" Grid.Row="1" Grid.Column="0" Style="{StaticResource miEstilo}"/>
-                <Button x:Name="btnIniciar" Text="Iniciar sesion" Clicked="btnIniciar_Clicked" Grid.Row="2" Grid.Column="0" Style="{StaticResource buttonStyle}"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
 
-                <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuraio" Grid.Row="0" Grid.Column="1"/>
-                <Entry x:Name="txtContraseña" Placeholder="Ingrese la contraseña" Grid.Row="1" Grid.Column="1" IsPassword="True"/>
-                <Button x:Name="btnCancelar" Text="cancelar" Clicked="btnCancelar_Clicked" Grid.Row="2" Grid.Column="1" Style="{StaticResource buttonStyle}"/>
-                
-            </Grid>
-        </StackLayout>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="   " FontSize="20" Grid.Row="1" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="2" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="3" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="4" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="5" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="6" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="7" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="   " FontSize="20" Grid.Row="8" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="Usuario" Grid.Row="9" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Label Text="Contraseña" Grid.Row="10" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                    <Button x:Name="btnIniciar" Text="Iniciar sesion" Clicked="btnIniciar_Clicked" Grid.Row="11" Grid.Column="0" Style="{StaticResource buttonStyle}"/>
+
+                    <Entry x:Name="txtUsuario" Placeholder="Ingrese su usuario" HorizontalTextAlignment="Start" Grid.Row="9" Grid.Column="1"/>
+                    <Entry x:Name="txtContraseña" Placeholder="Ingrese su contraseña" HorizontalTextAlignment="Start" Grid.Row="10" Grid.Column="1" IsPassword="True"/>
+                    <Button x:Name="btnCancelar" Text="cancelar" Clicked="btnCancelar_Clicked" Grid.Row="11" Grid.Column="1" Style="{StaticResource buttonStyle}"/>
+
+                </Grid>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

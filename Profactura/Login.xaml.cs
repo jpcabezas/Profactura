@@ -19,9 +19,21 @@ namespace Profactura
 
         private void btnIniciar_Clicked(object sender, EventArgs e)
         {
-            String usuario = "jcabezas";
+            String usuario = "Admin";
+            String usuario2 = "comercial1";
             String contraseña = "2023";
+            String contrasena2 = "2023";
+            String usuario3 = "comercial2";
+            String contrasena3 = "2023";
             if (txtUsuario.Text == usuario && txtContraseña.Text == contraseña)
+            {
+                Navigation.PushAsync(new Menu(usuario));
+            }
+            else if (txtUsuario.Text == usuario2 && txtContraseña.Text == contrasena2)
+            {
+                Navigation.PushAsync(new Menu(usuario));
+            }
+            else if (txtUsuario.Text == usuario3 && txtContraseña.Text == contrasena3)
             {
                 Navigation.PushAsync(new Menu(usuario));
             }

@@ -27,7 +27,7 @@ namespace Profactura
 
         private void btnInserCliente_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegistroCliente());
+            Navigation.PushAsync(new RegistroCliente(usuario));
         }
 
         private void btnVerInver_Clicked(object sender, EventArgs e)

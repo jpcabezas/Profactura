@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profactura.Android", "Profa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profactura.iOS", "Profactura.iOS\Profactura.iOS.csproj", "{B8371D9E-5D78-4F28-9A9E-C284D65ECBB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profactura", "Profactura\Profactura.csproj", "{AC869F10-117C-4595-AC71-A2A6F2AEAC67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profactura", "Profactura\Profactura.csproj", "{AC869F10-117C-4595-AC71-A2A6F2AEAC67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{5641F7A8-2120-4905-B4AC-8C9AC7998607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

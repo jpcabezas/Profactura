@@ -2,9 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Profactura.RegistroCliente">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="blue"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="CornerRadius" Value="100"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="REGISTRAR CLIENTE" FontSize="18" TextColor="DarkBlue"/>
-        </StackLayout>
+        <Grid>
+            <!-- Aquí colocamos la imagen de fondo de pantalla -->
+            <Image Source="fondopantallas.png" Aspect="AspectFill"/>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Text="                           " TextColor="RED" 
+                       HorizontalTextAlignment="Center" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+                <StackLayout>
+                    <Label Text="INSERTAR CLIENTE" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <Entry x:Name="txtCodigo" Placeholder="Ingrese Código" Keyboard="Numeric"/>
+                    <Entry x:Name="txtNombre" Placeholder="Nombre"/>
+                    <Entry x:Name="txtApellido" Placeholder="Apellido"/>
+                    <Entry x:Name="txtRuc" Placeholder="Ruc" Keyboard="Numeric"/>
+                    <Entry x:Name="txtEmpresa" Placeholder="Empresa"/>
+                    <Entry x:Name="txtDireccion" Placeholder="Direccion"/>
+                    <Entry x:Name="txtTelefono" Placeholder="Teléfono" Keyboard="Numeric"/>
+
+                    <Button x:Name="btnRegistro" Text="Registar" Clicked="btnRegistro_Clicked"/>
+                    <Button x:Name="btnFoto" Text="Foto" Clicked="btnFoto_Clicked"/>
+                    <Image x:Name="Imagen"/>
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
