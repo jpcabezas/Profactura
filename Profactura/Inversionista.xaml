@@ -1,10 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Profactura.Inversionista">
+             x:Class="Profactura.Inversionista" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="blue"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="CornerRadius" Value="100"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="VER INVERSIONISTA" FontSize="18" TextColor="DarkBlue"/>
-        </StackLayout>
+        <Grid>
+            <!-- Aquí colocamos la imagen de fondo de pantalla -->
+            <Image Source="fondomenu.png" Aspect="AspectFill"/>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Text="                           " TextColor="RED" 
+                       HorizontalTextAlignment="Center" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Label Text="CODIGO" TextColor="RED" FontSize="16" Grid.Row="0" Grid.Column="0"/-->
+                    <Label Text="NOMBRE" TextColor="#283593" FontSize="16" HorizontalTextAlignment="Center" BackgroundColor="White" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="APELLIDO" TextColor="#283593" FontSize="16" HorizontalTextAlignment="Center" BackgroundColor="White" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="CEDULA" TextColor="#283593" FontSize="16" HorizontalTextAlignment="Center" BackgroundColor="white" Grid.Row="0" Grid.Column="2"/>
+                    <Label Text="TELEFONO" TextColor="#283593" FontSize="14" HorizontalTextAlignment="End" BackgroundColor="White" Grid.Row="0" Grid.Column="3"/>
+                    <Label Text="                           " TextColor="RED" 
+                       HorizontalTextAlignment="Center" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+
+                </Grid>
+                <ListView x:Name="ListaInversion" ItemSelected="ListaInversion_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <!--Label Text="{Binding codigo}" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="0"/-->
+                                        <Label Text="{Binding nombre}" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                                        <Label Text="{Binding apellido}" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+                                        <Label Text="{Binding cedula}" TextColor="White" FontSize="13" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
+                                        <Label Text="{Binding telefono}" TextColor="White" FontSize="15" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3"/>
+                                    </Grid>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button x:Name="btnMostrar" Text="Mostrar Inversionista" Clicked="btnMostrar_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Style="{StaticResource buttonStyle}"/>
+
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

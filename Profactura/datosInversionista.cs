@@ -8,11 +8,11 @@ namespace Profactura
     {
         public int codigo { set; get; }
 
-        public String cedula { set; get; }
+        public int cedula { set; get; }
 
         public String nombre { set; get; }
 
-        public int apellido { set; get; }
+        public String apellido { set; get; }
 
         public String direccion { set; get; }
         public int telefono { set; get; }

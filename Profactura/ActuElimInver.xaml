@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Profactura.RegistroInversionista">
+             x:Class="Profactura.ActuElimInver">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">
@@ -20,18 +20,15 @@
                 <Label Text="                           " TextColor="RED" 
                        HorizontalTextAlignment="Center" FontSize="16" Grid.Row="1" Grid.Column="1"/>
                 <StackLayout>
-                    <Label Text="INSERTAR INVERSIONISTA" FontSize="20" HorizontalTextAlignment="Center"/>
-                    <Entry x:Name="txtCodigo" Placeholder="Ingrese Código" Keyboard="Numeric"/>
+                    <Entry x:Name="txtCodigo" Placeholder="Ingrese Código" IsEnabled="False"/>
                     <Entry x:Name="txtNombre" Placeholder="Nombre"/>
                     <Entry x:Name="txtApellido" Placeholder="Apellido"/>
                     <Entry x:Name="txtCedula" Placeholder="Cedula" Keyboard="Numeric"/>
                     <Entry x:Name="txtDireccion" Placeholder="Direccion"/>
                     <Entry x:Name="txtTelefono" Placeholder="Teléfono" Keyboard="Numeric"/>
 
-                    <Button x:Name="btnRegistro" Text="Registar" Clicked="btnRegistro_Clicked" Style="{StaticResource buttonStyle}"/>
-                    <Button x:Name="btnFoto" Text="Foto" Clicked="btnFoto_Clicked" Style="{StaticResource buttonStyle}"/>
-                    <Image x:Name="Imagen"/>
-
+                    <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Style="{StaticResource buttonStyle}"></Button>
+                    <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked"  Style="{StaticResource buttonStyle}"></Button>
                 </StackLayout>
             </StackLayout>
         </Grid>

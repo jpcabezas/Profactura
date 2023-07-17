@@ -32,12 +32,12 @@ namespace Profactura
 
         private void btnVerInver_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Inversionista());
+            Navigation.PushAsync(new Inversionista(usuario));
         }
 
         private void btnInserInver_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegistroInversionista());
+            Navigation.PushAsync(new RegistroInversionista(usuario));
         }
 
         private void btnSalir_Clicked(object sender, EventArgs e)
