@@ -34,6 +34,7 @@ namespace Profactura
         private void ListaCliente_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var objetoDatos = (datosCliente)e.SelectedItem;
+            Navigation.PushAsync(new ActuElimCliente(objetoDatos,usuario));
         }
 
         private async void btnMostrar_Clicked(object sender, EventArgs e)

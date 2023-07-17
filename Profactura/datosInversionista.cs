@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Profactura
 {
-    class datosInversionista
+    public class datosInversionista
     {
         public int codigo { set; get; }
 
